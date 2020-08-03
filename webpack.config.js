@@ -46,7 +46,9 @@ const commonConfig = {
         },
       },
     ],
+
   },
+
 };
 // #endregion
 
@@ -74,5 +76,4 @@ rendererConfig.plugins = [
     template: path.resolve(__dirname, './public/index.html'),
   }),
 ];
-
 module.exports = [mainConfig, rendererConfig];

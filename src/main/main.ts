@@ -2,16 +2,24 @@
  * Entry point of the Election app.
  */
 import { app, BrowserWindow } from 'electron';
+import { mainReloader, rendererReloader } from 'electron-hot-reload';
 import * as path from 'path';
 import * as url from 'url';
 
+
 let mainWindow: Electron.BrowserWindow | null;
+
+// hotreload setting
+const mainFile = path.join(__dirname, '*.*');
+mainReloader(mainFile, undefined, (error, path) => {
+    console.log("It is a main's process hook!");
+});
 
 function createWindow(): void {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800,
+        height: 1000,
+        width: 1920,
         webPreferences: {
             webSecurity: false,
             devTools: process.env.NODE_ENV === 'production' ? false : true
@@ -60,3 +68,4 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+
