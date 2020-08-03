@@ -12,14 +12,14 @@
     "build:mac": "electron-builder build --mac --x64"
   },
   "build": {
-    "appId": "com.devtography.electron_boilerplate",
-    "productName": "Electron+React+TypeScript Boilerplate",
+    "appId": "com.test.baeeuddeum",
+    "productName": "Test_baeeuddeum",
     "directories": {
       "app": "./dist/",
       "output": "./out/"
     },
     "mac": {
-      "target": "pkg"
+      "target": "default"
     },
     "win": {
       "target": "nsis",
@@ -45,7 +45,7 @@
     "cross-env": "^5.2.1",
     "css-loader": "^1.0.1",
     "electron": "^3.1.13",
-    "electron-builder": "^20.44.4",
+    "electron-builder": "^22.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-import-resolver-webpack": "^0.11.1",
